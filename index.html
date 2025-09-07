@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICON – Redefining Streetwear</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Import Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="text-gray-900">
+
+  <!-- Advertisement Bar -->
+  <div class="w-full bg-black text-white text-center py-4 text-sm tracking-wide">
+    <span id="prev" class="mr-12 cursor-pointer hover:text-gray-400 transition text-lg">&lt;</span>
+
+    <span id="adText" class="uppercase">Free Shipping On Orders Over $150</span>
+    <span id="next" class="ml-12 cursor-pointer hover:text-gray-400 transition text-lg">&gt;</span>
+  </div>
+
+  <header class="flex justify-between items-center px-6 py-4 bg-white shadow-md sticky top-0 z-50">
+    <!-- Left: Hamburger (mobile only) -->
+    <button id="menu-btn" class="lg:hidden">
+      <i data-lucide="menu" class="w-7 h-7"></i>
+    </button>
+
+    <!-- Center: Logo -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold lg:static lg:transform-none">
+      ICON
+    </div>
+
+    <!-- Center Nav (desktop only) -->
+    <nav class="hidden lg:flex">
+      <ul class="flex space-x-8 uppercase">
+        <li><a href="#new" class="hover:text-gray-500">New Heights</a></li>
+        <li><a href="#featured" class="hover:text-gray-500 flex items-center">
+            Featured <span class="ml-1">▾</span>
+          </a></li>
+        <li><a href="#clothing" class="hover:text-gray-500 flex items-center">
+            Clothing <span class="ml-1">▾</span>
+          </a></li>
+        <li><a href="#footwear" class="hover:text-gray-500">Footwear</a></li>
+        <li><a href="#accessories" class="hover:text-gray-500">Accessories</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right: Icons -->
+    <div class="flex items-center space-x-6 text-gray-700">
+      <!-- Currency (desktop only) -->
+      <div class="hidden lg:flex items-center space-x-1 cursor-pointer">
+        <div class="w-6 h-6 rounded-full overflow-hidden">
+          <img src="./img/us-flag.jfif" alt="Flag" class="w-full h-full object-cover">
+        </div>
+        <span>USD $</span>
+        <i data-lucide="chevron-down" class="w-4 h-4"></i>
+      </div>
+
+      <!-- Search -->
+      <a href="#search" class="hover:text-gray-500">
+        <i data-lucide="search" class="w-5 h-5"></i>
+      </a>
+
+      <!-- Account (desktop only) -->
+      <a href="#account" class="hidden lg:flex hover:text-gray-500">
+        <i data-lucide="user" class="w-5 h-5"></i>
+      </a>
+
+      <!-- Cart -->
+      <a href="#cart" class="hover:text-gray-500 relative">
+        <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+        <span class="absolute -top-2 -right-2 bg-black text-white text-xs rounded-full px-1.5 py-0.5">3</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Mobile Nav (hidden by default) -->
+  <nav id="mobile-menu"
+    class="lg:hidden fixed inset-0 bg-white transform -translate-y-full transition-transform duration-300 z-50">
+    <div class="flex justify-end p-6">
+      <button id="close-menu">
+        <i data-lucide="x" class="w-7 h-7"></i>
+      </button>
+    </div>
+    <ul class="flex flex-col items-center justify-center h-full space-y-6 uppercase text-2xl">
+      <li><a href="#new" class="hover:text-gray-500">New Heights</a></li>
+      <li><a href="#featured" class="hover:text-gray-500">Featured</a></li>
+      <li><a href="#clothing" class="hover:text-gray-500">Clothing</a></li>
+      <li><a href="#footwear" class="hover:text-gray-500">Footwear</a></li>
+      <li><a href="#accessories" class="hover:text-gray-500">Accessories</a></li>
+    </ul>
+  </nav>
+
+
+
+
+  <!-- BG img -->
+
+  <div class="w-full h-[500px] lg:h-screen">
+    <img src="./img/banner-img.webp" alt="Banner" class="w-full h-full object-cover">
+  </div>
+
+  <div class="container px-2 lg:px-10">
+    <!-- new arrival -->
+    <div class="lg:flex justify-between items-center my-10">
+      <div>
+        <h3 class="uppercase text-2xl font-semibold mb-4">new arrivals</h3>
+        <p>With perfectly fitted premium tees and ultra-soft sweaters, we welcome the new season ahead.</p>
+      </div>
+      <div>
+        <button class="bg-black uppercase text-white py-4 px-8 cursor-pointer hover:bg-gray-800 transition mt-6">
+          shop all
+        </button>
+      </div>
+    </div>
+
+    <!-- new arrival products -->
+    <div class="grid grid-cols-2 gap-4 my-10 lg:grid-cols-4">
+      <div class="relative">
+        <button class="absolute  z-10 text-white uppercase px-3 py-1 bg-black text-sm">new</button>
+        <img src="./img/img-1.jpg" alt="Product 1" class="w-full h-full">
+      </div>
+
+      <div class="relative">
+        <button class="absolute  z-10 text-white uppercase px-3 py-1 bg-black text-sm">new</button>
+        <img src="./img/img-2.webp" alt="Product 2" class="w-full h-full">
+      </div>
+
+      <div class="relative">
+        <button class="absolute  z-10 text-white uppercase px-3 py-1 bg-black text-sm">new</button>
+        <img src="./img/img-3.jpg" alt="Product 3" class="w-full h-full">
+      </div>
+
+      <div class="relative">
+        <button class="absolute  z-10 text-white uppercase px-3 py-1 bg-black text-sm">new</button>
+        <img src="./img/img-4.webp" alt="Product 4" class="w-full h-full">
+      </div>
+    </div>
+
+
+
+
+    <!-- Top Category-->
+    <div class=" lg:flex justify-between items-center">
+      <div>
+        <h3 class="uppercase text-3xl font-semibold mb-4">SHOP OUR TOP CATEGORIES</h3>
+        <p>With perfectly fitted premium tees and ultra-soft sweaters, we welcome the new season ahead.</p>
+
+      </div>
+      <div>
+        <button class="bg-black uppercase text-white py-4 px-8 cursor-pointer hover:bg-gray-800 transition mt-6">
+          view more
+        </button>
+      </div>
+    </div>
+
+    <!-- Top Category products -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-20 mt-5">
+      <!-- Item 1 -->
+      <div class="relative">
+        <img class="w-full" src="./img/img-5.jpg" alt="">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <p class="text-white uppercase text-3xl font-bold text-center">polo & t-shirts</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="relative">
+        <img class="w-full" src="./img/img-6.jpg" alt="">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <p class="text-white uppercase text-3xl font-bold text-center">denim jeans</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="relative">
+        <img class="w-full" src="./img/img-7.webp" alt="">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <p class="text-white uppercase text-3xl font-bold text-center">pants</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- second banner -->
+    <div class="w-full h-[500px] lg:h-screen">
+      <img src="./img/banner-2.webp" alt="Banner" class="w-full h-full object-cover">
+    </div>
+
+
+    <!-- Foot wear -->
+    <div class="lg:flex justify-between items-center my-10">
+      <div>
+        <h3 class="uppercase text-3xl font-semibold mb-4">FOOTWEAR</h3>
+        <p>Step up your style for any occasion with our curated selection of footwear.</p>
+      </div>
+      <div>
+        <button class="bg-black uppercase text-white py-4 px-8 cursor-pointer hover:bg-gray-800 mt-6">
+          shop all
+        </button>
+      </div>
+    </div>
+
+    <!-- Foot Wear products -->
+    <div class="grid grid-cols-2 gap-6 my-10 lg:grid-cols-4">
+
+      <div class="relative group">
+        <button class="absolute  z-10 text-white uppercase px-3 py-1 bg-red-700 text-sm">sale</button>
+        <img src="./img/img-8.webp" alt="Product 1"
+          class="w-full  transition-transform duration-300 group-hover:scale-105">
+        <h4 class="text-center my-2">THE PAVIO TRAINER</h4>
+        <div class="text-center text-sm">
+          <p><span class="text-gray-500 line-through">$140.00</span> - <span class="text-red-700">$105.00</span></p>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <button class="absolute  z-10 text-white uppercase px-3 py-1 bg-red-700 text-sm">sale</button>
+        <img src="./img/img-9.webp" alt="Product 2"
+          class="w-full  transition-transform duration-300 group-hover:scale-105">
+        <h4 class="text-center my-2">THE PAVIO TRAINER</h4>
+        <div class="text-center text-sm">
+          <p><span class="text-gray-500 line-through">$140.00</span> - <span class="text-red-700">$105.00</span></p>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <button class="absolute  z-10 text-white uppercase px-3 py-1 bg-red-700 text-sm">sale</button>
+        <img src="./img/img-10.webp" alt="Product 3"
+          class="w-full  transition-transform duration-300 group-hover:scale-105">
+        <h4 class="text-center my-2">THE PAVIO TRAINER</h4>
+        <div class="text-center text-sm">
+          <p><span class="text-gray-500 line-through">$140.00</span> - <span class="text-red-700">$105.00</span></p>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <button class="absolute  z-10 text-white uppercase px-3 py-1 bg-red-700 text-sm">sale</button>
+        <img src="./img/img-11.webp" alt="Product 4"
+          class="w-full  transition-transform duration-300 group-hover:scale-105">
+        <h4 class="text-center my-2">THE PAVIO TRAINER</h4>
+        <div class="text-center text-sm">
+          <p><span class="text-gray-500 line-through">$140.00</span> - <span class="text-red-700">$105.00</span></p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- third banner -->
+    <div class="mt-[100px]">
+      <img src="./img/banner-3.webp" alt="Banner" class="m">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-10 px-4 lg:px-20 mt-[100px]  bg-black ">
+    <div class="lg:flex justify-between text-white">
+      <div class="w-[300px] mb-8 lg:mb-0">
+        <h2 class="text-white text-4xl">ICON</h2>
+        <p class=" my-4">About Us</p>
+        <p class="text-xs">Established in 2018, ICON is all about standing out from the crowd and staying unique.</p>
+        <p class="text-xs my-4">In just a few years, ICON is now part of the American streetwear scene and a leading
+          global destination for the latest menswear.</p>
+        <button class="rounded px-4 py-2 bg-purple-700 cursor-pointer hover:bg-gray-500">
+          Follow on shop
+        </button>
+      </div>
+      <div class="mb-8">
+        <h3 class="text-xl">SHOP</h3>
+        <ul class="text-xs">
+          <li class="my-2">Pants</li>
+          <li class="my-2">Shirts</li>
+          <li class="my-2">Shorts</li>
+          <li class="my-2">Jackets</li>
+          <li class="my-2">Foot Wear</li>
+          <li class="my-2">NEW HEIGHTS</li>
+          <li class="my-2">Active wears</li>
+          <li class="my-2">Best Sellers</li>
+          <li class="my-2">New Arrivals</li>
+        </ul>
+      </div>
+      <div class="mb-8">
+        <h3 class="text-xl uppercase">Customer Support</h3>
+        <ul class="text-xs">
+          <li class="my-2">Shipping</li>
+          <li class="my-2">Track Your Order</li>
+          <li class="my-2">Request a return</li>
+          <li class="my-2">Returns & Refunds</li>
+          <li class="my-2">Privacy Policy</li>
+          <li class="my-2">About Us</li>
+          <li class="my-2">FAQ</li>
+        </ul>
+      </div>
+      <div class="w-[300px] mb-4">
+        <h3 class="text-xl uppercase">JOIN THE CLUB</h3>
+        <p class="text-xs my-6">Get exclusive access to new product releases,
+          special offers and restocks. Join the ICON Club.
+        </p>
+<input type="text" placeholder="Email"
+  class="p-4 w-full bg-black/40 text-white border border-gray-500 rounded-md placeholder-gray-400 focus:outline-none focus:ring-0 focus:border-gray-500" />
+      </div>
+    </div>
+
+    <!-- Divider Line -->
+    <div class="border-t border-gray-600"></div>
+
+    <!-- Bottom Text -->
+    <div class="text-center py-4 text-xs text-gray-400 bg-black">
+      CRAFTED BY KWALI-E WEBSITE
+    </div>
+  </footer>
+
+
+
+  <!-- Load Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+
+  <!-- nav code  -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuBtn = document.getElementById("menu-btn");
+      const closeBtn = document.getElementById("close-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      // Open mobile menu
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("-translate-y-full");
+        mobileMenu.classList.add("translate-y-0");
+      });
+
+      // Close mobile menu
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-y-0");
+        mobileMenu.classList.add("-translate-y-full");
+      });
+
+      // Optional: close when clicking a link
+      mobileMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("translate-y-0");
+          mobileMenu.classList.add("-translate-y-full");
+        });
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
